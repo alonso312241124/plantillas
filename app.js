@@ -16,4 +16,14 @@ app.get('/saludo', function (req, res) {
     res.render('saludo', {hora:hora.getHours()});
 })
 
+app.get('/productos', function (req, res) {
+    const productos = [
+        {id: '1', nombre: 'Mesa', precio: 20, color:['rojo', 'negro', 'verde']},
+        {id: '2', nombre: 'Silla', precio: 10, color:['rojo', 'negro', 'verde']},
+        {id: '3', nombre: 'Armario', precio: 100, color:['rojo', 'negro', 'verde']},
+        {id: '4', nombre: 'Sofá', precio: 200, color:['rojo', 'negro', 'verde']}
+    ]
+    res.render('productos', {productos:productos});
+})
+
 app.listen(3000)

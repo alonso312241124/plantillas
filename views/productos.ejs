@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <% for (producto of productos) { %>
+        <h2>Producto: <%= producto.nombre %></h2>
+        <form>
+            <label for="id">Id</label>
+            <input type="number" value="<%= producto.id %>">
+            <br>
+            <label for="nombre">Nombre</label>
+            <input type="text" value="<%= producto.nombre %>">
+            <br>
+            <label for="precio">Precio</label>
+            <input type="number" value="<%= producto.precio %>">
+            <br>
+            <label for="color">Color</label>
+            <select>
+                <option value="<%= producto.color[0] %>"><%= producto.color[0] %></option>
+                <option value="<%= producto.color[1] %>"><%= producto.color[1] %></option>
+                <option value="<%= producto.color[2] %>"><%= producto.color[2] %></option>
+            </select>
+        </form>
+        <hr>
+    <% } %>
+    <input type="submit" value="Enviar">
+</body>
+</html>
